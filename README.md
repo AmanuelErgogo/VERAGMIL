@@ -1,3 +1,7 @@
+
+
+📄 Paper             🎥 Video              💥 Failure Gallery
+
 # VERAGMIL: Virtual Environment for Robot‑Assisted Feeding of Granular Foods with Imitation Learning Models
 
 > **Repository accompanying the IROS 2025 paper**  
