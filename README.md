@@ -1,20 +1,8 @@
-
-
-📄 Paper             🎥 Video              💥 Failure Gallery
-
 # VERAGMIL: Virtual Environment for Robot‑Assisted Feeding of Granular Foods with Imitation Learning Models
 
 > **Repository accompanying the IROS 2025 paper**  
 > Amanuel Ergogo, Diego Dall’Alba, Przemyslaw Korzeniowski  
 > *VERAGMIL: Virtual Environment for Robot‑Assisted Feeding of Granular Foods with Imitation Learning Models*
-
----
-
-## Features
-- **Realistic granular simulation** powered by NVIDIA PhysX 5 (GPU) inside Isaac Sim  
-- **VR interface**   
-- **Multiple robot embodiments**,**UFactory xArm 7** and **Unitree G1**, with spoon or fork end‑effectors.  
-- **Learning‑from‑Demonstration back‑ends** (Behavioral Cloning, BC‑RNN, BCQ) 
 
 ---
 
