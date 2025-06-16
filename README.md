@@ -6,7 +6,6 @@
 
 ---
 <img src="https://github.com/AmanuelErgogo/VERAGMIL/blob/main/IROS25VERAGMIL.gif" width="1500" />
-![Alt Text](https://github.com/AmanuelErgogo/VERAGMIL/blob/main/IROS25VERAGMIL.gif)
 
 
 ## Quick Start
