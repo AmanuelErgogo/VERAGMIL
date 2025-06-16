@@ -75,7 +75,7 @@ $ python scripts/train.py --cfg configs/bc_rnn.yaml \
 The following milestones describe how VERAGMIL will expand to support **LeRobotDataset** and additional policy families—**ACT**, **Diffusion Policies**, **Pi0**, and **Groot**.
 
 - [ ] Integrate **LeRobotDataset**
-- [ ] Add training and evaluation pipelines for generative policies:
+- [ ] Integrate generative policies:
   - **Action Chunking Transformer (ACT)**
   - **Diffusion Policy**
 - [ ] Integrate foundational models:
