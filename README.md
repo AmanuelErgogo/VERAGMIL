@@ -5,7 +5,7 @@
 > *VERAGMIL: Virtual Environment for Robot‑Assisted Feeding of Granular Foods with Imitation Learning Models*
 
 ---
-
+<img src="https://github.com/AmanuelErgogo/VERAGMIL/blob/main/IROS25VERAGMIL.gif" width="640" height="480" />
 ![Alt Text](https://github.com/AmanuelErgogo/VERAGMIL/blob/main/IROS25VERAGMIL.gif)
 
 
