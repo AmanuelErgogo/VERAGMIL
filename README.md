@@ -6,6 +6,9 @@
 
 ---
 
+![Alt Text](https://github.com/AmanuelErgogo/VERAGMIL/blob/main/IROS25VERAGMIL.gif)
+
+
 ## Quick Start
 ```bash
 # Clone and enter the repository
