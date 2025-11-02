@@ -1,10 +1,11 @@
-# VERAGMIL: Virtual Environment for Robot‑Assisted Feeding of Granular Foods with Imitation Learning Models
+## VERAGMIL: Virtual Environment for Scooping of Granular Foods with Imitation Learning Models
 
+<!--
 > **Repository accompanying the IROS 2025 paper**  
 > Amanuel Ergogo, Diego Dall’Alba, Przemyslaw Korzeniowski  
-> *VERAGMIL: Virtual Environment for Robot‑Assisted Feeding of Granular Foods with Imitation Learning Models*
+> *VERAGMIL: Virtual Environment for Scooping of Granular Foods with Imitation Learning Models*
 
----
+
 <img src="https://github.com/AmanuelErgogo/VERAGMIL/blob/main/IROS25VERAGMIL.gif" width="1500" />
 
 
@@ -64,14 +65,14 @@ $ python scripts/demonstrate.py --cfg configs/scoop.yaml \
                            --device spacemouse
 ```
 
----
+
 
 ## Training Imitation‑Learning Policies
 ```bash
 $ python scripts/train.py --cfg configs/bc_rnn.yaml \
                           dataset.path data/vr_scoop \
 ```
----
+
 
 ## Roadmap & Planned Integrations
 The following milestones describe how VERAGMIL will expand to support **LeRobotDataset** and additional policy families—**ACT**, **Diffusion Policies**, **Pi0**, and **Groot**.
@@ -83,8 +84,7 @@ The following milestones describe how VERAGMIL will expand to support **LeRobotD
 - [ ] Integrate foundational models:
   - **Pi0**
   - **smolVLA**
-
----
+  --!>
 
 
 
