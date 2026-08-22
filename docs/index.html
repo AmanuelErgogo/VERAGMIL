@@ -59,7 +59,8 @@
     "sameAs": [
       "https://doi.org/10.1109/IROS60139.2025.11247362",
       "https://arxiv.org/abs/2608.18258",
-      "https://github.com/AmanuelErgogo/VERAGMIL"
+      "https://github.com/AmanuelErgogo/VERAGMIL",
+      "https://www.youtube.com/watch?v=uSp21PHe5Lo"
     ],
     "keywords": [
       "robot-assisted feeding",
@@ -88,7 +89,6 @@
 
   <main id="top">
     <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">IROS 2025</p>
       <h1 id="page-title">VERAGMIL</h1>
       <p class="subtitle">Learning robotic granular food manipulation from virtual reality demonstrations</p>
       <p class="project-context">An imitation-learning framework for robot-assisted feeding</p>
@@ -104,6 +104,7 @@
         <a href="https://doi.org/10.1109/IROS60139.2025.11247362">IEEE</a>
         <a href="https://arxiv.org/abs/2608.18258">arXiv</a>
         <a href="https://github.com/AmanuelErgogo/VERAGMIL">Code</a>
+        <a href="https://www.youtube.com/watch?v=uSp21PHe5Lo">Video</a>
       </div>
 
       <figure class="hero-media">
@@ -116,6 +117,21 @@
       <h2>Overview</h2>
       <p>VERAGMIL is a simulation and data-collection framework for teaching robots to scoop and transport granular foods. It combines GPU-accelerated physics with a virtual reality interface so a person can demonstrate the task directly in 3D. The resulting data supports imitation learning for robot-assisted feeding scenarios where spillage and variation in food properties matter.</p>
       <p>The study compares policies trained from VR and 3D space-mouse demonstrations using Behavioral Cloning (BC), recurrent Behavioral Cloning (BC-RNN), and Batch-Constrained Q-learning (BCQ). Performance is evaluated through task success, spillage, completion time, and generalization to unseen food items.</p>
+    </section>
+
+    <section class="section" aria-labelledby="evaluation-title">
+      <h2 id="evaluation-title">Policy evaluations</h2>
+      <p class="section-intro">Short clips from the <a href="https://www.youtube.com/watch?v=uSp21PHe5Lo">accompanying video</a>.</p>
+      <div class="demo-grid">
+        <figure>
+          <img src="assets/policy-scooping-peas.gif" alt="BCQ policy scooping peas in the VERAGMIL simulated environment" width="600" height="338" loading="lazy">
+          <figcaption>BCQ-3DM policy scooping peas.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/policy-scooping-cereal.gif" alt="BCQ policy trained with virtual reality demonstrations scooping cereal in simulation" width="600" height="338" loading="lazy">
+          <figcaption>BCQ-VRI policy scooping cereal.</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section id="approach" class="section">
