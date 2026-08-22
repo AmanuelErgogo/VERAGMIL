@@ -200,8 +200,86 @@ figcaption {
   gap: 28px;
 }
 
-.demo-grid img {
+.demo-grid img,
+.vectorized-figure img {
   border: 1px solid var(--line);
+}
+
+.study-grid figcaption {
+  line-height: 1.5;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.results-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  border: 1px solid var(--line);
+  font-size: 0.84rem;
+  line-height: 1.35;
+}
+
+.results-table caption {
+  caption-side: bottom;
+  padding-top: 10px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-align: left;
+}
+
+.results-table th,
+.results-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.results-table thead th {
+  background: var(--wash);
+  font-weight: 700;
+}
+
+.results-table tbody th:not([colspan]),
+.results-table tfoot th {
+  text-align: left;
+}
+
+.results-table .group-row th {
+  padding: 8px 10px;
+  color: var(--muted);
+  background: #fbfcfd;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.results-table tfoot {
+  background: #eef3fa;
+  font-weight: 700;
+}
+
+.results-table .best-model {
+  color: #fff;
+  background: var(--accent);
+}
+
+.results-table abbr {
+  text-decoration: none;
+}
+
+.result-note {
+  max-width: 760px;
+  margin: 22px 0 0;
+}
+
+.vectorized-figure {
+  max-width: 700px;
 }
 
 h2 {

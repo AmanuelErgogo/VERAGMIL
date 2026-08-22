@@ -82,6 +82,7 @@
     <nav aria-label="Main navigation">
       <a href="#overview">Overview</a>
       <a href="#approach">Approach</a>
+      <a href="#results">Results</a>
       <a href="#paper">Paper</a>
       <a href="#citation">Citation</a>
     </nav>
@@ -119,21 +120,6 @@
       <p>The study compares policies trained from VR and 3D space-mouse demonstrations using Behavioral Cloning (BC), recurrent Behavioral Cloning (BC-RNN), and Batch-Constrained Q-learning (BCQ). Performance is evaluated through task success, spillage, completion time, and generalization to unseen food items.</p>
     </section>
 
-    <section class="section" aria-labelledby="evaluation-title">
-      <h2 id="evaluation-title">Policy evaluations</h2>
-      <p class="section-intro">Short clips from the <a href="https://www.youtube.com/watch?v=uSp21PHe5Lo">accompanying video</a>.</p>
-      <div class="demo-grid">
-        <figure>
-          <img src="assets/policy-scooping-peas.gif" alt="BCQ policy scooping peas in the VERAGMIL simulated environment" width="600" height="338" loading="lazy">
-          <figcaption>BCQ-3DM policy scooping peas.</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/policy-scooping-cereal.gif" alt="BCQ policy trained with virtual reality demonstrations scooping cereal in simulation" width="600" height="338" loading="lazy">
-          <figcaption>BCQ-VRI policy scooping cereal.</figcaption>
-        </figure>
-      </div>
-    </section>
-
     <section id="approach" class="section">
       <h2>How it works</h2>
       <figure class="system-figure">
@@ -148,9 +134,88 @@
       </ol>
     </section>
 
-    <section class="section prose">
-      <h2>Key result</h2>
-      <p>Policies learned from VR demonstrations consistently outperformed those trained with 3D space-mouse data. BCQ achieved the strongest overall performance, particularly in reducing spillage, and came closest to the human-expert baseline.</p>
+    <section class="section" aria-labelledby="study-title">
+      <h2 id="study-title">Evaluation design</h2>
+      <p class="section-intro">The experiments separate two questions: how well different imitation-learning models perform, and how the demonstration interface affects the learned policy.</p>
+      <div class="demo-grid study-grid">
+        <figure>
+          <img src="assets/study-evaluation.gif" alt="Evaluation diagram comparing BC, BC-RNN, and BCQ policies with a human baseline" width="800" height="450" loading="lazy">
+          <figcaption><strong>2. Evaluate.</strong> BC, BC-RNN, and BCQ are tested on diverse granular foods and benchmarked against a human baseline.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/study-comparison.gif" alt="Study diagram comparing policies trained from virtual reality and 3D space-mouse demonstrations" width="800" height="450" loading="lazy">
+          <figcaption><strong>3. Compare.</strong> VR and 3D space-mouse demonstrations are compared for near-human performance and generalization.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="evaluation-title">
+      <h2 id="evaluation-title">Example rollouts</h2>
+      <p class="section-intro">Representative learned-policy rollouts from the <a href="https://www.youtube.com/watch?v=uSp21PHe5Lo">accompanying video</a>.</p>
+      <div class="demo-grid">
+        <figure>
+          <img src="assets/policy-scooping-peas.gif" alt="BCQ policy scooping peas in the VERAGMIL simulated environment" width="600" height="338" loading="lazy">
+          <figcaption>BCQ-3DM policy scooping peas.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/policy-scooping-cereal.gif" alt="BCQ policy trained with virtual reality demonstrations scooping cereal in simulation" width="600" height="338" loading="lazy">
+          <figcaption>BCQ-VRI policy scooping cereal.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="results" class="section" aria-labelledby="results-title">
+      <h2 id="results-title">Results</h2>
+      <p class="section-intro">Policies learned from VR demonstrations consistently achieved higher success rates than policies trained from 3D space-mouse demonstrations. BCQ performed best overall and generalized most strongly to unseen foods.</p>
+
+      <div class="table-scroll" tabindex="0" aria-label="Success-rate results; scroll horizontally on small screens">
+        <table class="results-table">
+          <caption><a href="https://arxiv.org/pdf/2608.18258">Table II from the paper</a>. Task success rate (%); VRI denotes virtual reality interface demonstrations and 3DM denotes 3D space-mouse demonstrations.</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">Material</th>
+              <th scope="colgroup" colspan="2">BC</th>
+              <th scope="colgroup" colspan="2">BC-RNN</th>
+              <th scope="colgroup" colspan="2">BCQ</th>
+              <th scope="colgroup" colspan="2">Human</th>
+            </tr>
+            <tr>
+              <th scope="col"><abbr title="Virtual reality interface">VRI</abbr></th>
+              <th scope="col"><abbr title="3D space mouse">3DM</abbr></th>
+              <th scope="col"><abbr title="Virtual reality interface">VRI</abbr></th>
+              <th scope="col"><abbr title="3D space mouse">3DM</abbr></th>
+              <th scope="col"><abbr title="Virtual reality interface">VRI</abbr></th>
+              <th scope="col"><abbr title="3D space mouse">3DM</abbr></th>
+              <th scope="col"><abbr title="Virtual reality interface">VRI</abbr></th>
+              <th scope="col"><abbr title="3D space mouse">3DM</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="group-row"><th colspan="9">Training materials</th></tr>
+            <tr><th scope="row">Rice</th><td>82</td><td>65</td><td>90</td><td>75</td><td>93</td><td>85</td><td>97</td><td>91</td></tr>
+            <tr><th scope="row">Buckwheat</th><td>80</td><td>60</td><td>88</td><td>72</td><td>91</td><td>80</td><td>95</td><td>88</td></tr>
+            <tr><th scope="row">Barley</th><td>78</td><td>58</td><td>85</td><td>70</td><td>89</td><td>78</td><td>96</td><td>90</td></tr>
+            <tr><th scope="row">Pasta</th><td>65</td><td>45</td><td>75</td><td>60</td><td>80</td><td>70</td><td>90</td><td>85</td></tr>
+            <tr class="group-row"><th colspan="9">Unseen materials</th></tr>
+            <tr><th scope="row">Peas</th><td>55</td><td>40</td><td>65</td><td>50</td><td>75</td><td>65</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><th scope="row">Beans</th><td>50</td><td>38</td><td>60</td><td>48</td><td>70</td><td>60</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><th scope="row">Flakes</th><td>35</td><td>20</td><td>50</td><td>30</td><td>60</td><td>40</td><td>&mdash;</td><td>&mdash;</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><th scope="row">All materials (avg.)</th><td>64</td><td>47</td><td>73</td><td>58</td><td class="best-model">80</td><td>68</td><td>95</td><td>89</td></tr>
+          </tfoot>
+        </table>
+      </div>
+      <p class="result-note"><strong>Across all materials, BCQ reached 80% success with VR demonstrations versus 68% with 3D space-mouse demonstrations.</strong> Table III also reports lower BCQ spillage with VR data: 8 pieces on average compared with 15 for 3D space-mouse data.</p>
+    </section>
+
+    <section class="section" aria-labelledby="parallel-title">
+      <h2 id="parallel-title">Vectorized environments</h2>
+      <p class="section-intro">VERAGMIL supports multiple simulated robot instances running concurrently, enabling vectorized environments for parallel policy training and evaluation.</p>
+      <figure class="vectorized-figure">
+        <img src="assets/vectorized-environments.gif" alt="Multiple xArm7 robots running concurrently in vectorized VERAGMIL simulation environments" width="700" height="394" loading="lazy">
+        <figcaption>Parallel simulation instances can collect experience and evaluate policies concurrently.</figcaption>
+      </figure>
     </section>
 
     <section id="paper" class="section prose">
