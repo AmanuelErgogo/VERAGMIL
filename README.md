@@ -1,6 +1,8 @@
 # VERAGMIL
 
-**Virtual reality demonstrations and imitation learning for robot-assisted feeding with granular foods**
+**Learning robotic granular food manipulation from virtual reality demonstrations**
+
+An imitation-learning framework for robot-assisted feeding.
 
 [Project page](https://amanuelergogo.github.io/VERAGMIL/) · [IEEE](https://doi.org/10.1109/IROS60139.2025.11247362) · [arXiv](https://arxiv.org/abs/2608.18258)
 
