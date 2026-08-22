@@ -10,7 +10,7 @@ An imitation-learning framework for robot-assisted feeding.
 > Amanuel Ergogo, Diego Dall'Alba, and Przemyslaw Korzeniowski<br>
 > 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pages 13075–13082
 
-![VERAGMIL simulation showing robotic scooping and transport of granular foods](docs/assets/veragmil-demo.gif)
+[![VERAGMIL simulation showing robotic scooping and transport of granular foods](docs/assets/veragmil-overview.jpg)](https://www.youtube.com/watch?v=uSp21PHe5Lo)
 
 VERAGMIL combines a high-fidelity, GPU-accelerated simulation with a virtual reality interface for collecting human demonstrations of granular-food scooping and transport. The framework supports imitation-learning experiments for robot-assisted feeding and evaluates policies through success rate, spillage, completion time, and generalization to unseen foods.
 

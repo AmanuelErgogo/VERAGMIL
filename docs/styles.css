@@ -201,7 +201,9 @@ figcaption {
 }
 
 .demo-grid img,
-.vectorized-figure img {
+.demo-grid video,
+.vectorized-figure img,
+.vectorized-figure video {
   border: 1px solid var(--line);
 }
 
@@ -215,7 +217,7 @@ figcaption {
   min-width: 0;
 }
 
-.material-video {
+.media-video {
   display: block;
   width: 100%;
   height: auto;

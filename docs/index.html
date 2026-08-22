@@ -110,7 +110,10 @@
       </div>
 
       <figure class="hero-media">
-        <img src="assets/veragmil-demo.gif" alt="VERAGMIL simulation showing an xArm7 robot scooping and transporting different granular foods" width="800" height="450">
+        <video class="media-video hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/veragmil-overview.jpg" width="1280" height="720" aria-label="VERAGMIL simulation showing an xArm7 robot scooping and transporting different granular foods">
+          <source src="assets/veragmil-overview.mp4" type="video/mp4">
+          <a href="assets/veragmil-overview.mp4">View the VERAGMIL overview clip.</a>
+        </video>
         <figcaption>Simulated scooping and transport across granular foods with different physical properties.</figcaption>
       </figure>
     </section>
@@ -140,11 +143,17 @@
       <p class="section-intro">The experiments separate two questions: how well different imitation-learning models perform, and how the demonstration interface affects the learned policy.</p>
       <div class="demo-grid study-grid">
         <figure>
-          <img src="assets/study-evaluation.gif" alt="Evaluation diagram comparing BC, BC-RNN, and BCQ policies with a human baseline" width="800" height="450" loading="lazy">
+          <video class="media-video deferred-video" muted loop playsinline preload="none" poster="assets/study-evaluation.jpg" width="1280" height="720" aria-label="Evaluation diagram comparing BC, BC-RNN, and BCQ policies with a human baseline">
+            <source data-src="assets/study-evaluation.mp4" type="video/mp4">
+            <a href="assets/study-evaluation.mp4">View the model-evaluation clip.</a>
+          </video>
           <figcaption><strong>2. Evaluate.</strong> BC, BC-RNN, and BCQ are tested on diverse granular foods and benchmarked against a human baseline.</figcaption>
         </figure>
         <figure>
-          <img src="assets/study-comparison.gif" alt="Study diagram comparing policies trained from virtual reality and 3D space-mouse demonstrations" width="800" height="450" loading="lazy">
+          <video class="media-video deferred-video" muted loop playsinline preload="none" poster="assets/study-comparison.jpg" width="1280" height="720" aria-label="Study diagram comparing policies trained from virtual reality and 3D space-mouse demonstrations">
+            <source data-src="assets/study-comparison.mp4" type="video/mp4">
+            <a href="assets/study-comparison.mp4">View the interface-comparison clip.</a>
+          </video>
           <figcaption><strong>3. Compare.</strong> VR and 3D space-mouse demonstrations are compared for near-human performance and generalization.</figcaption>
         </figure>
       </div>
@@ -155,42 +164,42 @@
       <p class="section-intro">Six close-up scoop-to-lift sequences retain the 1280 × 720 source resolution. The clips show how particle geometry and contact behavior affect flow, settling, and retention on the spoon.</p>
       <div class="simulation-grid">
         <figure class="simulation-card">
-          <video class="material-video" muted loop playsinline preload="none" poster="assets/material-barley.jpg" width="1280" height="720" aria-label="High-fidelity simulation of a robot scooping barley">
+          <video class="media-video material-video deferred-video" muted loop playsinline preload="none" poster="assets/material-barley.jpg" width="1280" height="720" aria-label="High-fidelity simulation of a robot scooping barley">
             <source data-src="assets/material-barley.mp4" type="video/mp4">
             <a href="assets/material-barley.mp4">View the barley clip.</a>
           </video>
           <figcaption><strong>Barley.</strong> Elongated grains slide, align, and settle around the spoon.</figcaption>
         </figure>
         <figure class="simulation-card">
-          <video class="material-video" muted loop playsinline preload="none" poster="assets/material-macaroni.jpg" width="1280" height="720" aria-label="High-fidelity simulation of a robot scooping macaroni">
+          <video class="media-video material-video deferred-video" muted loop playsinline preload="none" poster="assets/material-macaroni.jpg" width="1280" height="720" aria-label="High-fidelity simulation of a robot scooping macaroni">
             <source data-src="assets/material-macaroni.mp4" type="video/mp4">
             <a href="assets/material-macaroni.mp4">View the macaroni clip.</a>
           </video>
           <figcaption><strong>Macaroni.</strong> Large curved pieces produce pronounced inter-particle contact.</figcaption>
         </figure>
         <figure class="simulation-card">
-          <video class="material-video" muted loop playsinline preload="none" poster="assets/material-buckwheat.jpg" width="1280" height="720" aria-label="High-fidelity simulation of a robot scooping buckwheat">
+          <video class="media-video material-video deferred-video" muted loop playsinline preload="none" poster="assets/material-buckwheat.jpg" width="1280" height="720" aria-label="High-fidelity simulation of a robot scooping buckwheat">
             <source data-src="assets/material-buckwheat.mp4" type="video/mp4">
             <a href="assets/material-buckwheat.mp4">View the buckwheat clip.</a>
           </video>
           <figcaption><strong>Buckwheat.</strong> Dense, angular particles flow into the spoon during acquisition.</figcaption>
         </figure>
         <figure class="simulation-card">
-          <video class="material-video" muted loop playsinline preload="none" poster="assets/material-flakes.jpg" width="1280" height="720" aria-label="High-fidelity simulation of a robot scooping flakes">
+          <video class="media-video material-video deferred-video" muted loop playsinline preload="none" poster="assets/material-flakes.jpg" width="1280" height="720" aria-label="High-fidelity simulation of a robot scooping flakes">
             <source data-src="assets/material-flakes.mp4" type="video/mp4">
             <a href="assets/material-flakes.mp4">View the flakes clip.</a>
           </video>
           <figcaption><strong>Flakes.</strong> Thin, irregular pieces overlap and shift under utensil motion.</figcaption>
         </figure>
         <figure class="simulation-card">
-          <video class="material-video" muted loop playsinline preload="none" poster="assets/material-green-beans.jpg" width="1280" height="720" aria-label="High-fidelity simulation of a robot scooping green beans">
+          <video class="media-video material-video deferred-video" muted loop playsinline preload="none" poster="assets/material-green-beans.jpg" width="1280" height="720" aria-label="High-fidelity simulation of a robot scooping green beans">
             <source data-src="assets/material-green-beans.mp4" type="video/mp4">
             <a href="assets/material-green-beans.mp4">View the green-bean clip.</a>
           </video>
           <figcaption><strong>Green beans.</strong> Curved pieces roll and interlock as the spoon lifts.</figcaption>
         </figure>
         <figure class="simulation-card">
-          <video class="material-video" muted loop playsinline preload="none" poster="assets/material-peas.jpg" width="1280" height="720" aria-label="High-fidelity simulation of a robot scooping peas">
+          <video class="media-video material-video deferred-video" muted loop playsinline preload="none" poster="assets/material-peas.jpg" width="1280" height="720" aria-label="High-fidelity simulation of a robot scooping peas">
             <source data-src="assets/material-peas.mp4" type="video/mp4">
             <a href="assets/material-peas.mp4">View the pea clip.</a>
           </video>
@@ -248,7 +257,10 @@
       <h2 id="parallel-title">Vectorized environments</h2>
       <p class="section-intro">VERAGMIL supports multiple simulated robot instances running concurrently, enabling vectorized environments for parallel policy training and evaluation.</p>
       <figure class="vectorized-figure">
-        <img src="assets/vectorized-environments.gif" alt="Multiple xArm7 robots running concurrently in vectorized VERAGMIL simulation environments" width="700" height="394" loading="lazy">
+        <video class="media-video deferred-video" muted loop playsinline preload="none" poster="assets/vectorized-environments.jpg" width="1280" height="720" aria-label="Multiple xArm7 robots running concurrently in vectorized VERAGMIL simulation environments">
+          <source data-src="assets/vectorized-environments.mp4" type="video/mp4">
+          <a href="assets/vectorized-environments.mp4">View the vectorized-environment clip.</a>
+        </video>
         <figcaption>Parallel simulation instances can collect experience and evaluate policies concurrently.</figcaption>
       </figure>
     </section>
@@ -282,7 +294,8 @@
 
   <script>
     (() => {
-      const videos = document.querySelectorAll(".material-video");
+      const videos = document.querySelectorAll(".deferred-video");
+      const autoplayVideos = document.querySelectorAll("video[autoplay]");
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
       const loadVideo = (video) => {
@@ -295,6 +308,10 @@
       if (reducedMotion) {
         videos.forEach((video) => {
           loadVideo(video);
+          video.controls = true;
+        });
+        autoplayVideos.forEach((video) => {
+          video.pause();
           video.controls = true;
         });
         return;
