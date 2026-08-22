@@ -205,6 +205,25 @@ figcaption {
   border: 1px solid var(--line);
 }
 
+.simulation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 28px;
+}
+
+.simulation-card {
+  min-width: 0;
+}
+
+.material-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border: 1px solid var(--line);
+}
+
 .study-grid figcaption {
   line-height: 1.5;
 }
@@ -364,6 +383,11 @@ footer p {
   }
 
   .demo-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .simulation-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
