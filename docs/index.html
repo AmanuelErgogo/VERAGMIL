@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>VERAGMIL | Robot-Assisted Feeding with Granular Foods</title>
+  <meta name="description" content="VERAGMIL combines virtual reality demonstrations, high-fidelity simulation, and imitation learning for robotic scooping and transport of granular foods in robot-assisted feeding.">
+  <meta name="author" content="Amanuel Ergogo, Diego Dall'Alba, Przemyslaw Korzeniowski">
+  <meta name="keywords" content="VERAGMIL, robot-assisted feeding, robotic food manipulation, granular food manipulation, imitation learning, learning from demonstration, virtual reality, robotic scooping, assistive robotics, Isaac Sim">
+  <link rel="canonical" href="https://amanuelergogo.github.io/VERAGMIL/">
+
+  <!-- Google Scholar / Highwire Press metadata: keep the published title exact. -->
+  <meta name="citation_title" content="VERAGMIL: Virtual Environment for Scooping Granular Foods with Imitation Learning Models">
+  <meta name="citation_author" content="Ergogo, Amanuel">
+  <meta name="citation_author" content="Dall'Alba, Diego">
+  <meta name="citation_author" content="Korzeniowski, Przemyslaw">
+  <meta name="citation_publication_date" content="2025/10/25">
+  <meta name="citation_conference_title" content="2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)">
+  <meta name="citation_firstpage" content="13075">
+  <meta name="citation_lastpage" content="13082">
+  <meta name="citation_doi" content="10.1109/IROS60139.2025.11247362">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2608.18258">
+  <meta name="citation_arxiv_id" content="2608.18258">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="VERAGMIL | Robot-Assisted Feeding with Granular Foods">
+  <meta property="og:description" content="Virtual reality demonstrations and imitation learning for robotic scooping and transport of granular foods.">
+  <meta property="og:url" content="https://amanuelergogo.github.io/VERAGMIL/">
+  <meta property="og:image" content="https://amanuelergogo.github.io/VERAGMIL/assets/granular-foods.png">
+  <meta property="og:image:alt" content="VERAGMIL simulated robot scooping and transporting several granular foods">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "VERAGMIL: Virtual Environment for Scooping Granular Foods with Imitation Learning Models",
+    "headline": "VERAGMIL: Virtual Environment for Scooping Granular Foods with Imitation Learning Models",
+    "description": "A virtual reality and high-fidelity simulation framework for collecting demonstrations and training imitation learning policies for granular food manipulation in robot-assisted feeding.",
+    "datePublished": "2025-10-25",
+    "pagination": "13075-13082",
+    "identifier": [
+      "https://doi.org/10.1109/IROS60139.2025.11247362",
+      "https://arxiv.org/abs/2608.18258"
+    ],
+    "url": "https://amanuelergogo.github.io/VERAGMIL/",
+    "image": "https://amanuelergogo.github.io/VERAGMIL/assets/granular-foods.png",
+    "author": [
+      {"@type": "Person", "name": "Amanuel Ergogo", "url": "https://sites.google.com/view/amanuel-ergogo/"},
+      {"@type": "Person", "name": "Diego Dall'Alba"},
+      {"@type": "Person", "name": "Przemyslaw Korzeniowski"}
+    ],
+    "publisher": {"@type": "Organization", "name": "IEEE"},
+    "isPartOf": {
+      "@type": "PublicationEvent",
+      "name": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+    },
+    "sameAs": [
+      "https://doi.org/10.1109/IROS60139.2025.11247362",
+      "https://arxiv.org/abs/2608.18258",
+      "https://github.com/AmanuelErgogo/VERAGMIL"
+    ],
+    "keywords": [
+      "robot-assisted feeding",
+      "granular food manipulation",
+      "imitation learning",
+      "learning from demonstration",
+      "virtual reality",
+      "robotic scooping",
+      "assistive robotics"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="VERAGMIL home">VERAGMIL</a>
+    <nav aria-label="Main navigation">
+      <a href="#overview">Overview</a>
+      <a href="#approach">Approach</a>
+      <a href="#paper">Paper</a>
+      <a href="#citation">Citation</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">IROS 2025</p>
+      <h1 id="page-title">VERAGMIL</h1>
+      <p class="subtitle">Virtual reality demonstrations and imitation learning for robot-assisted feeding with granular foods</p>
+
+      <p class="authors">
+        <a href="https://sites.google.com/view/amanuel-ergogo/">Amanuel Ergogo</a>,
+        Diego Dall'Alba, and Przemyslaw Korzeniowski
+      </p>
+      <p class="venue">2025 IEEE/RSJ International Conference on Intelligent Robots and Systems</p>
+
+      <div class="links" aria-label="Project links">
+        <a class="primary" href="https://arxiv.org/pdf/2608.18258">Paper</a>
+        <a href="https://doi.org/10.1109/IROS60139.2025.11247362">IEEE</a>
+        <a href="https://arxiv.org/abs/2608.18258">arXiv</a>
+        <a href="https://github.com/AmanuelErgogo/VERAGMIL">Code</a>
+      </div>
+
+      <figure class="hero-media">
+        <img src="assets/veragmil-demo.gif" alt="VERAGMIL simulation showing an xArm7 robot scooping and transporting different granular foods" width="800" height="450">
+        <figcaption>Simulated scooping and transport across granular foods with different physical properties.</figcaption>
+      </figure>
+    </section>
+
+    <section id="overview" class="section prose">
+      <h2>Overview</h2>
+      <p>VERAGMIL is a simulation and data-collection framework for teaching robots to scoop and transport granular foods. It combines GPU-accelerated physics with a virtual reality interface so a person can demonstrate the task directly in 3D. The resulting data supports imitation learning for robot-assisted feeding scenarios where spillage and variation in food properties matter.</p>
+      <p>The study compares policies trained from VR and 3D space-mouse demonstrations using Behavioral Cloning (BC), recurrent Behavioral Cloning (BC-RNN), and Batch-Constrained Q-learning (BCQ). Performance is evaluated through task success, spillage, completion time, and generalization to unseen food items.</p>
+    </section>
+
+    <section id="approach" class="section">
+      <h2>How it works</h2>
+      <figure class="system-figure">
+        <img src="assets/system-overview.png" alt="VERAGMIL system diagram connecting the granular-food simulation, VR interface, and imitation-learning pipeline" width="1811" height="691" loading="lazy">
+        <figcaption>The framework links a robot-assisted feeding simulation, demonstration interfaces, and policy learning.</figcaption>
+      </figure>
+
+      <ol class="steps">
+        <li><strong>Simulate.</strong> Granular foods with varied shapes and physical properties are modeled in NVIDIA Isaac Sim and Isaac Lab.</li>
+        <li><strong>Demonstrate.</strong> An operator records precise scooping and transport trajectories through VR; a 3D space mouse provides a comparison condition.</li>
+        <li><strong>Learn and evaluate.</strong> Imitation-learning policies are tested against a human-expert baseline and on food items not seen during training.</li>
+      </ol>
+    </section>
+
+    <section class="section prose">
+      <h2>Key result</h2>
+      <p>Policies learned from VR demonstrations consistently outperformed those trained with 3D space-mouse data. BCQ achieved the strongest overall performance, particularly in reducing spillage, and came closest to the human-expert baseline.</p>
+    </section>
+
+    <section id="paper" class="section prose">
+      <h2>Paper</h2>
+      <p class="official-title"><strong>VERAGMIL: Virtual Environment for Scooping Granular Foods with Imitation Learning Models</strong></p>
+      <p>Amanuel Ergogo, Diego Dall'Alba, and Przemyslaw Korzeniowski. IROS 2025, pages 13075–13082.</p>
+
+      <h3>Abstract</h3>
+      <p>Robot-Assisted Feeding (RAF) systems are essential for assisting individuals with disabilities or motor impairments in eating tasks. Manipulating granular food items, such as rice and beans, poses significant challenges due to their dynamic physical properties. Learning from human demonstrations offers a promising solution, but acquiring high-quality demonstrations is complex. VERAGMIL combines a high-fidelity simulator with an intuitive VR interface for recording demonstrations and supporting different imitation learning methods. Experiments compare BC, BC-RNN, and BCQ on scooping and transport tasks using VR and 3D space-mouse demonstrations. Results show that VR-based demonstrations lead to stronger policies, with BCQ performing best overall, especially in reducing spillage and approaching human performance.</p>
+    </section>
+
+    <section id="citation" class="section citation-section">
+      <h2>Citation</h2>
+      <pre><code>@inproceedings{ergogo2025veragmil,
+  author    = {Ergogo, Amanuel and Dall'Alba, Diego and Korzeniowski, Przemyslaw},
+  title     = {VERAGMIL: Virtual Environment for Scooping Granular Foods with Imitation Learning Models},
+  booktitle = {2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2025},
+  pages     = {13075--13082},
+  doi       = {10.1109/IROS60139.2025.11247362}
+}</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>Project page for VERAGMIL · IROS 2025</p>
+    <p><a href="https://github.com/AmanuelErgogo/VERAGMIL">Code and website source</a></p>
+  </footer>
+</body>
+</html>
