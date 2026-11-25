@@ -1,0 +1,106 @@
+WEBVTT
+
+00:00:00.470 --> 00:00:01.660
+Grains slide.
+
+00:00:02.912 --> 00:00:03.843
+Peas roll.
+
+00:00:04.714 --> 00:00:06.064
+Beans interlock.
+
+00:00:07.583 --> 00:00:11.561
+Robot-assisted feeding helps people
+with motor impairments eat.
+
+00:00:11.904 --> 00:00:16.456
+But for a robot, every spoonful
+of granular food is a physics problem.
+
+00:00:24.793 --> 00:00:26.509
+It starts in simulation.
+
+00:00:26.559 --> 00:00:30.827
+Seven granular foods, with varied shapes
+and physical properties,
+
+00:00:30.877 --> 00:00:36.890
+are modeled using GPU-accelerated physics
+in NVIDIA Isaac Sim and Isaac Lab.
+
+00:00:38.544 --> 00:00:43.611
+Next, an operator demonstrates scooping
+and transport directly in virtual reality,
+
+00:00:43.661 --> 00:00:47.318
+and, for comparison,
+with a 3D space mouse.
+
+00:00:47.368 --> 00:00:53.093
+Each interface yields 120 demonstrations,
+about 40 minutes of data.
+
+00:00:54.679 --> 00:00:58.725
+From these demonstrations, we train
+three imitation-learning methods:
+
+00:00:58.775 --> 00:01:02.880
+Behavioral Cloning, its recurrent variant,
+BC-RNN,
+
+00:01:02.930 --> 00:01:06.143
+and Batch-Constrained Q-learning, or BCQ.
+
+00:01:09.726 --> 00:01:12.143
+Two questions guide the evaluation.
+
+00:01:12.193 --> 00:01:14.485
+Which learning method performs best?
+
+00:01:14.535 --> 00:01:17.141
+And does the demonstration
+interface matter?
+
+00:01:18.565 --> 00:01:22.100
+Policies are tested on foods
+with very different dynamics,
+
+00:01:22.150 --> 00:01:24.695
+and benchmarked against a human expert.
+
+00:01:26.637 --> 00:01:30.046
+Peas, beans, and flakes
+were never seen during training.
+
+00:01:35.245 --> 00:01:37.844
+Policies trained on VR demonstrations
+
+00:01:37.894 --> 00:01:41.427
+consistently outperformed those
+trained with the space mouse.
+
+00:01:41.477 --> 00:01:47.139
+BCQ performed best overall,
+reaching 80% success with VR data,
+
+00:01:47.189 --> 00:01:52.801
+versus 68%, and it generalized
+most strongly to unseen foods.
+
+00:01:54.000 --> 00:01:58.505
+Trained on VR data, BCQ also spilled
+about half as much:
+
+00:01:58.555 --> 00:02:01.330
+8 pieces on average, versus 15.
+
+00:02:05.250 --> 00:02:10.363
+And with vectorized environments, many
+robots can train and evaluate in parallel.
+
+00:02:13.002 --> 00:02:15.656
+Better demonstrations, better policies.
+
+00:02:15.706 --> 00:02:18.766
+Find the paper and code
+on the project page.
