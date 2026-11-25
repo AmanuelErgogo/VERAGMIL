@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0d10">
 
   <title>VERAGMIL | Robotic Granular Food Manipulation</title>
   <meta name="description" content="VERAGMIL uses virtual reality demonstrations and imitation learning for robotic granular food manipulation in robot-assisted feeding.">
@@ -26,18 +25,11 @@
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="VERAGMIL | Robotic Granular Food Manipulation">
-  <meta property="og:description" content="Learning robotic granular food manipulation from virtual reality demonstrations for robot-assisted feeding. Watch the 2-minute project film.">
+  <meta property="og:description" content="Learning robotic granular food manipulation from virtual reality demonstrations for robot-assisted feeding.">
   <meta property="og:url" content="https://amanuelergogo.github.io/VERAGMIL/">
-  <meta property="og:image" content="https://amanuelergogo.github.io/VERAGMIL/assets/veragmil-film-card.jpg">
-  <meta property="og:image:width" content="1920">
-  <meta property="og:image:height" content="1080">
-  <meta property="og:image:alt" content="VERAGMIL title card: learning robotic granular food manipulation from virtual reality demonstrations">
-  <meta property="og:video" content="https://amanuelergogo.github.io/VERAGMIL/assets/veragmil-film.mp4">
-  <meta property="og:video:type" content="video/mp4">
-  <meta property="og:video:width" content="1920">
-  <meta property="og:video:height" content="1080">
+  <meta property="og:image" content="https://amanuelergogo.github.io/VERAGMIL/assets/granular-foods.png">
+  <meta property="og:image:alt" content="VERAGMIL simulated robot scooping and transporting several granular foods">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://amanuelergogo.github.io/VERAGMIL/assets/veragmil-film-card.jpg">
 
   <script type="application/ld+json">
   {
@@ -53,7 +45,7 @@
       "https://arxiv.org/abs/2608.18258"
     ],
     "url": "https://amanuelergogo.github.io/VERAGMIL/",
-    "image": "https://amanuelergogo.github.io/VERAGMIL/assets/veragmil-film-card.jpg",
+    "image": "https://amanuelergogo.github.io/VERAGMIL/assets/granular-foods.png",
     "author": [
       {"@type": "Person", "name": "Amanuel Ergogo", "url": "https://sites.google.com/view/amanuel-ergogo/"},
       {"@type": "Person", "name": "Diego Dall'Alba"},
@@ -67,18 +59,9 @@
     "sameAs": [
       "https://doi.org/10.1109/IROS60139.2025.11247362",
       "https://arxiv.org/abs/2608.18258",
-      "https://github.com/AmanuelErgogo/VERAGMIL"
+      "https://github.com/AmanuelErgogo/VERAGMIL",
+      "https://amanuelergogo.github.io/VERAGMIL/assets/veragmil-film.mp4"
     ],
-    "video": {
-      "@type": "VideoObject",
-      "name": "VERAGMIL project film",
-      "description": "A narrated two-minute overview of VERAGMIL: the granular-food simulator, VR demonstrations, imitation learning, and results.",
-      "thumbnailUrl": "https://amanuelergogo.github.io/VERAGMIL/assets/veragmil-film-card.jpg",
-      "uploadDate": "2026-11-25",
-      "duration": "PT2M21S",
-      "contentUrl": "https://amanuelergogo.github.io/VERAGMIL/assets/veragmil-film.mp4",
-      "embedUrl": "https://amanuelergogo.github.io/VERAGMIL/#film"
-    },
     "keywords": [
       "robot-assisted feeding",
       "granular food manipulation",
@@ -91,437 +74,208 @@
   }
   </script>
 
-  <link rel="preload" href="fonts/InterDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Lora-Italic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
-  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <a class="skip-link" href="#film">Skip to the film</a>
-
   <header class="site-header">
-    <div class="wrap">
-      <a class="wordmark" href="#top" aria-label="VERAGMIL, back to top">VERAGMIL</a>
-      <nav aria-label="Main navigation">
-        <a href="#film">Film</a>
-        <a href="#approach">Approach</a>
-        <a href="#evaluate">Rollouts</a>
-        <a href="#results">Results</a>
-        <a href="#paper">Paper</a>
-        <a href="#citation">Cite</a>
-      </nav>
-    </div>
+    <a class="wordmark" href="#top" aria-label="VERAGMIL home">VERAGMIL</a>
+    <nav aria-label="Main navigation">
+      <a href="#overview">Overview</a>
+      <a href="#approach">Approach</a>
+      <a href="#simulations">Simulations</a>
+      <a href="#results">Results</a>
+      <a href="#paper">Paper</a>
+      <a href="#citation">Citation</a>
+    </nav>
   </header>
 
   <main id="top">
-    <!-- ================= HERO (title card) ================= -->
     <section class="hero" aria-labelledby="page-title">
-      <video class="hero-bg" autoplay muted loop playsinline preload="auto" poster="assets/hero-loop.jpg" aria-hidden="true" tabindex="-1">
-        <source src="assets/hero-loop.mp4" type="video/mp4">
-      </video>
-      <div class="wrap">
-        <p class="hero-venue fade-up d1">IEEE/RSJ IROS 2025</p>
-        <h1 id="page-title">VERAGMIL</h1>
-        <span class="rule" aria-hidden="true"></span>
-        <p class="tagline fade-up d2">Learning robotic granular food manipulation<br> from virtual reality demonstrations</p>
-        <p class="context fade-up d2">An imitation-learning framework for robot-assisted feeding</p>
-        <p class="authors fade-up d3">
-          <span><a href="https://sites.google.com/view/amanuel-ergogo/">Amanuel Ergogo</a></span><span class="sep" aria-hidden="true">·</span><span>Diego Dall'Alba</span><span class="sep" aria-hidden="true">·</span><span>Przemyslaw Korzeniowski</span>
-        </p>
-        <div class="hero-actions fade-up d4" aria-label="Project links">
-          <a class="btn btn-primary" href="#film">
-            <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg>
-            Watch the film <span class="meta">2:21</span>
-          </a>
-          <a class="btn" href="https://arxiv.org/pdf/2608.18258">Paper</a>
-          <a class="btn" href="https://doi.org/10.1109/IROS60139.2025.11247362">IEEE</a>
-          <a class="btn" href="https://arxiv.org/abs/2608.18258">arXiv</a>
-          <a class="btn" href="https://github.com/AmanuelErgogo/VERAGMIL">Code</a>
-        </div>
+      <h1 id="page-title">VERAGMIL</h1>
+      <p class="subtitle">Learning robotic granular food manipulation from virtual reality demonstrations</p>
+      <p class="project-context">An imitation-learning framework for robot-assisted feeding</p>
+
+      <p class="authors">
+        <a href="https://sites.google.com/view/amanuel-ergogo/">Amanuel Ergogo</a>,
+        Diego Dall'Alba, and Przemyslaw Korzeniowski
+      </p>
+      <p class="venue">2025 IEEE/RSJ International Conference on Intelligent Robots and Systems</p>
+
+      <div class="links" aria-label="Project links">
+        <a class="primary" href="https://arxiv.org/pdf/2608.18258">Paper</a>
+        <a href="https://doi.org/10.1109/IROS60139.2025.11247362">IEEE</a>
+        <a href="https://arxiv.org/abs/2608.18258">arXiv</a>
+        <a href="https://github.com/AmanuelErgogo/VERAGMIL">Code</a>
+        <a href="assets/veragmil-film.mp4">Video</a>
       </div>
-      <a class="scroll-cue" href="#film" aria-label="Scroll to the film"></a>
+
+      <figure class="hero-media">
+        <video class="media-video hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/veragmil-overview.jpg" width="1280" height="720" aria-label="VERAGMIL simulation showing an xArm7 robot scooping and transporting different granular foods">
+          <source src="assets/veragmil-overview.mp4" type="video/mp4">
+          <a href="assets/veragmil-overview.mp4">View the VERAGMIL overview clip.</a>
+        </video>
+        <figcaption>Simulated scooping and transport across granular foods with different physical properties.</figcaption>
+      </figure>
     </section>
 
-    <!-- ================= FILM ================= -->
-    <section id="film" class="section" aria-labelledby="film-title">
-      <div class="wrap">
-        <div class="film-head">
-          <div>
-            <p class="eyebrow" data-reveal>Project film</p>
-            <h2 id="film-title" data-reveal="2">VERAGMIL in two minutes</h2>
-          </div>
-        </div>
-        <p class="lede" data-reveal="3">A narrated walkthrough of the simulator, the VR demonstrations, the learning methods, and what the experiments found.</p>
-        <figure class="film-frame" data-reveal="3">
-          <button class="film-play" type="button" aria-label="Play the project film" hidden>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13L19 12z" fill="currentColor"/></svg>
-          </button>
-          <video controls playsinline preload="metadata" poster="assets/veragmil-film-poster.jpg" width="1920" height="1080" aria-label="VERAGMIL project film, narrated, 2 minutes 21 seconds">
-            <source src="assets/veragmil-film.mp4" type="video/mp4">
-            <track kind="captions" src="assets/veragmil-film.en.vtt" srclang="en" label="English">
-            <a href="assets/veragmil-film.mp4">Download the VERAGMIL project film (MP4).</a>
+    <section id="overview" class="section prose">
+      <h2>Overview</h2>
+      <p>VERAGMIL is a simulation and data-collection framework for teaching robots to scoop and transport granular foods. It combines GPU-accelerated physics with a virtual reality interface so a person can demonstrate the task directly in 3D. The resulting data supports imitation learning for robot-assisted feeding scenarios where spillage and variation in food properties matter.</p>
+      <p>The study compares policies trained from VR and 3D space-mouse demonstrations using Behavioral Cloning (BC), recurrent Behavioral Cloning (BC-RNN), and Batch-Constrained Q-learning (BCQ). Performance is evaluated through task success, spillage, completion time, and generalization to unseen food items.</p>
+    </section>
+
+    <section id="approach" class="section">
+      <h2>How it works</h2>
+      <figure class="system-figure">
+        <img src="assets/system-overview.png" alt="VERAGMIL system diagram connecting the granular-food simulation, VR interface, and imitation-learning pipeline" width="1811" height="691" loading="lazy">
+        <figcaption>The framework links a robot-assisted feeding simulation, demonstration interfaces, and policy learning.</figcaption>
+      </figure>
+
+      <ol class="steps">
+        <li><strong>Simulate.</strong> Granular foods with varied shapes and physical properties are modeled in NVIDIA Isaac Sim and Isaac Lab.</li>
+        <li><strong>Demonstrate.</strong> An operator records precise scooping and transport trajectories through VR; a 3D space mouse provides a comparison condition.</li>
+        <li><strong>Learn and evaluate.</strong> Imitation-learning policies are tested against a human-expert baseline and on food items not seen during training.</li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="study-title">
+      <h2 id="study-title">Evaluation design</h2>
+      <p class="section-intro">The experiments separate two questions: how well different imitation-learning models perform, and how the demonstration interface affects the learned policy.</p>
+      <div class="demo-grid study-grid">
+        <figure>
+          <video class="media-video deferred-video" muted loop playsinline preload="none" poster="assets/study-evaluation.jpg" width="1280" height="720" aria-label="Evaluation diagram comparing BC, BC-RNN, and BCQ policies with a human baseline">
+            <source data-src="assets/study-evaluation.mp4" type="video/mp4">
+            <a href="assets/study-evaluation.mp4">View the model-evaluation clip.</a>
           </video>
+          <figcaption><strong>2. Evaluate.</strong> BC, BC-RNN, and BCQ are tested on diverse granular foods and benchmarked against a human baseline.</figcaption>
         </figure>
-        <p class="film-meta">
-          <span>2:21</span><span>1080p</span><span>English captions</span><span>Narrated with a synthetic voice</span><span><a href="assets/veragmil-film.mp4" download>Download MP4</a></span>
-        </p>
-      </div>
-    </section>
-
-    <!-- ================= OVERVIEW ================= -->
-    <section id="overview" class="section" aria-label="Overview">
-      <div class="wrap">
-        <p class="pull" data-reveal><span>Grains slide.</span> <span>Peas roll.</span> <span>Beans interlock.</span></p>
-        <div class="overview-body">
-          <p data-reveal="2">Robot-assisted feeding helps people with disabilities or motor impairments eat. Granular foods such as rice and beans are hard to scoop because of their dynamic physical properties. VERAGMIL is a simulation and data-collection framework for teaching robots to scoop and transport them. It combines GPU-accelerated physics with a virtual reality interface so a person can demonstrate the task directly in 3D.</p>
-          <p data-reveal="3">The study compares policies trained from VR and 3D space-mouse demonstrations using Behavioral Cloning (BC), recurrent Behavioral Cloning (BC-RNN), and Batch-Constrained Q-learning (BCQ). Performance is evaluated through task success, spillage, completion time, and generalization to unseen food items.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 01 SIMULATE ================= -->
-    <section id="approach" class="section" aria-labelledby="simulate-title">
-      <div class="wrap">
-        <p class="eyebrow" data-reveal><span class="num">01</span>Simulate</p>
-        <h2 id="simulate-title" data-reveal="2">A high-fidelity simulator for granular food</h2>
-        <p class="lede" data-reveal="3">Granular foods with varied shapes and physical properties are modeled in NVIDIA Isaac Sim and Isaac Lab, and scooped by a robot arm holding a spoon.</p>
-        <ul class="chips" data-reveal="3">
-          <li>NVIDIA Isaac Sim + Isaac Lab</li>
-          <li>GPU-accelerated physics</li>
-          <li>UFactory xArm7 with spoon</li>
-          <li>7 granular foods</li>
-        </ul>
-        <figure class="media-frame" data-reveal>
-          <img src="assets/granular-foods.png" alt="Six simulated scenes of an xArm7 robot scooping flakes, buckwheat, peas, green beans, macaroni and barley with a spoon" width="1688" height="956" loading="lazy">
+        <figure>
+          <video class="media-video deferred-video" muted loop playsinline preload="none" poster="assets/study-comparison.jpg" width="1280" height="720" aria-label="Study diagram comparing policies trained from virtual reality and 3D space-mouse demonstrations">
+            <source data-src="assets/study-comparison.mp4" type="video/mp4">
+            <a href="assets/study-comparison.mp4">View the interface-comparison clip.</a>
+          </video>
+          <figcaption><strong>3. Compare.</strong> VR and 3D space-mouse demonstrations are compared for near-human performance and generalization.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ================= 02 DEMONSTRATE ================= -->
-    <section class="section floor" aria-labelledby="demo-title">
-      <div class="wrap">
-        <p class="eyebrow" data-reveal><span class="num">02</span>Demonstrate</p>
-        <h2 id="demo-title" data-reveal="2">Demonstrations, recorded in virtual reality</h2>
-        <p class="lede" data-reveal="3">An operator records scooping and transport trajectories directly in 3D. A 3D space mouse provides the comparison condition.</p>
-        <div class="versus">
-          <article class="card vr" data-reveal>
-            <svg class="icon" viewBox="0 0 190 130" fill="none" stroke="#F3F0E8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M14 46 C4 46 2 30 14 26 L40 20"/><path d="M176 46 C186 46 188 30 176 26 L150 20"/>
-              <path d="M22 40 Q22 26 40 26 L150 26 Q168 26 168 40 L168 92 Q168 108 150 108 L114 108 Q104 108 100 96 Q95 86 90 96 Q86 108 76 108 L40 108 Q22 108 22 92 Z"/>
-              <path d="M34 50 L156 50" stroke-opacity=".35"/>
-              <circle cx="62" cy="76" r="14" stroke="#E3A250"/><circle cx="128" cy="76" r="14" stroke="#E3A250"/>
-            </svg>
-            <h3>Virtual reality</h3>
-            <p>The operator demonstrates the task directly in the simulated 3D scene.</p>
-            <dl class="stats">
-              <div><dt>demonstrations</dt><dd>120</dd></div>
-              <div><dt>per training food</dt><dd>30</dd></div>
-              <div><dt>minutes of data</dt><dd>≈40</dd></div>
-            </dl>
-          </article>
-          <div class="vs" aria-hidden="true">vs.</div>
-          <article class="card mouse" data-reveal="2">
-            <svg class="icon" viewBox="0 0 190 130" fill="none" stroke="#F3F0E8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M28 104 L48 84 L142 84 L162 104 Q164 112 156 112 L34 112 Q26 112 28 104 Z"/>
-              <path d="M62 84 L62 66 Q62 40 95 40 Q128 40 128 66 L128 84"/>
-              <path d="M70 62 Q95 52 120 62" stroke-opacity=".4"/>
-              <path d="M34 50 Q26 34 40 22" stroke="#5FA3DA"/><path d="M36 22 L41 21 L42 27" stroke="#5FA3DA"/>
-              <path d="M156 50 Q164 34 150 22" stroke="#5FA3DA"/><path d="M154 22 L149 21 L148 27" stroke="#5FA3DA"/>
-              <path d="M95 30 L95 10" stroke="#5FA3DA"/><path d="M89 16 L95 10 L101 16" stroke="#5FA3DA"/>
-            </svg>
-            <h3>3D space mouse</h3>
-            <p>A desktop 3D input device, recorded as the comparison condition.</p>
-            <dl class="stats">
-              <div><dt>demonstrations</dt><dd>120</dd></div>
-              <div><dt>per training food</dt><dd>30</dd></div>
-              <div><dt>minutes of data</dt><dd>≈40</dd></div>
-            </dl>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 03 LEARN ================= -->
-    <section class="section floor" aria-labelledby="learn-title">
-      <div class="wrap">
-        <p class="eyebrow" data-reveal><span class="num">03</span>Learn</p>
-        <h2 id="learn-title" data-reveal="2">Imitation learning from demonstrations</h2>
-        <p class="lede" data-reveal="3">BC, BC-RNN and BCQ policies are trained on each interface&rsquo;s demonstrations, then tested against a human-expert baseline and on foods not seen during training.</p>
-
-        <div class="pipeline">
-          <div class="pipe-col" data-reveal>
-            <h3>Observations</h3>
-            <div class="obs-grid">
-              <figure><img src="assets/obs-rgb.jpg" alt="RGB camera view of the robot and bowl" width="456" height="256" loading="lazy"><figcaption>RGB</figcaption></figure>
-              <figure><img src="assets/obs-depth.jpg" alt="Depth camera view" width="456" height="256" loading="lazy"><figcaption>Depth</figcaption></figure>
-              <figure><img src="assets/obs-normals.jpg" alt="Surface-normal camera view" width="456" height="256" loading="lazy"><figcaption>Normals</figcaption></figure>
-              <figure><img src="assets/obs-seg.jpg" alt="Segmentation camera view" width="456" height="256" loading="lazy"><figcaption>Segmentation</figcaption></figure>
-            </div>
-            <ul class="chips"><li>Proprioception</li><li>Contact sensor</li></ul>
-          </div>
-          <svg class="arrow" viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h34M27 4l9 8-9 8"/></svg>
-          <div class="pipe-col" data-reveal="2">
-            <h3>Imitation-learning models</h3>
-            <div class="models">
-              <div class="model"><b>BC</b><span>Behavioral Cloning</span></div>
-              <div class="model"><b>BC-RNN</b><span>Recurrent Behavioral Cloning</span></div>
-              <div class="model"><b>BCQ</b><span>Batch-Constrained Q-learning</span></div>
-            </div>
-          </div>
-          <svg class="arrow" viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h34M27 4l9 8-9 8"/></svg>
-          <div class="pipe-col" data-reveal="3">
-            <h3>Policy execution</h3>
-            <ol class="policy-steps">
-              <li><b>Learned policy</b>Scoop and transport actions</li>
-              <li><b>Inverse kinematics</b>Maps actions to joint targets</li>
-              <li><b>Low-level joint controllers</b>Drive the xArm7 joints</li>
-              <li><b>Actuator model</b>Simulated robot actuation</li>
-            </ol>
-          </div>
-        </div>
-
-        <figure class="paper-figure" data-reveal>
-          <div class="panel">
-            <img src="assets/system-overview.png" alt="VERAGMIL system diagram connecting the granular-food simulation, VR interface, and imitation-learning pipeline" width="1811" height="691" loading="lazy">
-          </div>
-          <figcaption>System overview from the paper: the simulation environment, the VR interface, and policy learning.</figcaption>
+    <section id="simulations" class="section" aria-labelledby="simulations-title">
+      <h2 id="simulations-title">Evaluation rollouts</h2>
+      <div class="simulation-grid">
+        <figure class="simulation-card">
+          <video class="media-video material-video deferred-video" muted loop playsinline preload="none" poster="assets/material-barley.jpg" width="1280" height="720" aria-label="Evaluation rollout of a robot policy scooping barley">
+            <source data-src="assets/material-barley.mp4" type="video/mp4">
+            <a href="assets/material-barley.mp4">View the barley clip.</a>
+          </video>
+          <figcaption><strong>Barley.</strong> Elongated grains slide, align, and settle around the spoon.</figcaption>
+        </figure>
+        <figure class="simulation-card">
+          <video class="media-video material-video deferred-video" muted loop playsinline preload="none" poster="assets/material-macaroni.jpg" width="1280" height="720" aria-label="Evaluation rollout of a robot policy scooping macaroni">
+            <source data-src="assets/material-macaroni.mp4" type="video/mp4">
+            <a href="assets/material-macaroni.mp4">View the macaroni clip.</a>
+          </video>
+          <figcaption><strong>Macaroni.</strong> Large curved pieces produce pronounced inter-particle contact.</figcaption>
+        </figure>
+        <figure class="simulation-card">
+          <video class="media-video material-video deferred-video" muted loop playsinline preload="none" poster="assets/material-buckwheat.jpg" width="1280" height="720" aria-label="Evaluation rollout of a robot policy scooping buckwheat">
+            <source data-src="assets/material-buckwheat.mp4" type="video/mp4">
+            <a href="assets/material-buckwheat.mp4">View the buckwheat clip.</a>
+          </video>
+          <figcaption><strong>Buckwheat.</strong> Dense, angular particles flow into the spoon during acquisition.</figcaption>
+        </figure>
+        <figure class="simulation-card">
+          <video class="media-video material-video deferred-video" muted loop playsinline preload="none" poster="assets/material-flakes.jpg" width="1280" height="720" aria-label="Evaluation rollout of a robot policy scooping flakes">
+            <source data-src="assets/material-flakes.mp4" type="video/mp4">
+            <a href="assets/material-flakes.mp4">View the flakes clip.</a>
+          </video>
+          <figcaption><strong>Flakes.</strong> Thin, irregular pieces overlap and shift under utensil motion.</figcaption>
+        </figure>
+        <figure class="simulation-card">
+          <video class="media-video material-video deferred-video" muted loop playsinline preload="none" poster="assets/material-green-beans.jpg" width="1280" height="720" aria-label="Evaluation rollout of a robot policy scooping green beans">
+            <source data-src="assets/material-green-beans.mp4" type="video/mp4">
+            <a href="assets/material-green-beans.mp4">View the green-bean clip.</a>
+          </video>
+          <figcaption><strong>Green beans.</strong> Curved pieces roll and interlock as the spoon lifts.</figcaption>
+        </figure>
+        <figure class="simulation-card">
+          <video class="media-video material-video deferred-video" muted loop playsinline preload="none" poster="assets/material-peas.jpg" width="1280" height="720" aria-label="Evaluation rollout of a robot policy scooping peas">
+            <source data-src="assets/material-peas.mp4" type="video/mp4">
+            <a href="assets/material-peas.mp4">View the pea clip.</a>
+          </video>
+          <figcaption><strong>Peas.</strong> Rounded particles roll and settle throughout the scoop.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ================= 04 EVALUATE ================= -->
-    <section id="evaluate" class="section" aria-labelledby="evaluate-title">
-      <div class="wrap">
-        <p class="eyebrow" data-reveal><span class="num">04</span>Evaluate</p>
-        <h2 id="evaluate-title" data-reveal="2">Two questions</h2>
-        <ol class="questions">
-          <li data-reveal><span class="n" aria-hidden="true">01</span><div><h3>Which learning method performs best?</h3><p>BC, BC-RNN and BCQ, benchmarked against a human expert.</p></div></li>
-          <li data-reveal="2"><span class="n" aria-hidden="true">02</span><div><h3>Does the demonstration interface matter?</h3><p>VR vs. 3D space mouse, on training foods and foods never seen in training.</p></div></li>
-        </ol>
-
-        <h2 class="rollouts-title" data-reveal>Evaluation rollouts</h2>
-        <div class="rollouts">
-          <figure class="rollout" data-reveal>
-            <div class="clip">
-              <video class="deferred-video" muted loop playsinline preload="none" poster="assets/material-barley.jpg" width="1280" height="720" aria-label="Evaluation rollout of a robot policy scooping barley">
-                <source data-src="assets/material-barley.mp4" type="video/mp4">
-              </video>
-              <span class="chip small trained">Training food</span>
-            </div>
-            <figcaption><b>Barley</b><span>Elongated grains slide, align, and settle around the spoon.</span></figcaption>
-          </figure>
-          <figure class="rollout" data-reveal="2">
-            <div class="clip">
-              <video class="deferred-video" muted loop playsinline preload="none" poster="assets/material-buckwheat.jpg" width="1280" height="720" aria-label="Evaluation rollout of a robot policy scooping buckwheat">
-                <source data-src="assets/material-buckwheat.mp4" type="video/mp4">
-              </video>
-              <span class="chip small trained">Training food</span>
-            </div>
-            <figcaption><b>Buckwheat</b><span>Dense, angular particles flow into the spoon during acquisition.</span></figcaption>
-          </figure>
-          <figure class="rollout" data-reveal="3">
-            <div class="clip">
-              <video class="deferred-video" muted loop playsinline preload="none" poster="assets/material-macaroni.jpg" width="1280" height="720" aria-label="Evaluation rollout of a robot policy scooping macaroni">
-                <source data-src="assets/material-macaroni.mp4" type="video/mp4">
-              </video>
-              <span class="chip small trained">Training food</span>
-            </div>
-            <figcaption><b>Macaroni</b><span>Large curved pieces produce pronounced inter-particle contact.</span></figcaption>
-          </figure>
-          <figure class="rollout" data-reveal>
-            <div class="clip">
-              <video class="deferred-video" muted loop playsinline preload="none" poster="assets/material-peas.jpg" width="1280" height="720" aria-label="Evaluation rollout of a robot policy scooping peas">
-                <source data-src="assets/material-peas.mp4" type="video/mp4">
-              </video>
-              <span class="chip small unseen">Unseen during training</span>
-            </div>
-            <figcaption><b>Peas</b><span>Rounded particles roll and settle throughout the scoop.</span></figcaption>
-          </figure>
-          <figure class="rollout" data-reveal="2">
-            <div class="clip">
-              <video class="deferred-video" muted loop playsinline preload="none" poster="assets/material-green-beans.jpg" width="1280" height="720" aria-label="Evaluation rollout of a robot policy scooping green beans">
-                <source data-src="assets/material-green-beans.mp4" type="video/mp4">
-              </video>
-              <span class="chip small unseen">Unseen during training</span>
-            </div>
-            <figcaption><b>Green beans</b><span>Curved pieces roll and interlock as the spoon lifts.</span></figcaption>
-          </figure>
-          <figure class="rollout" data-reveal="3">
-            <div class="clip">
-              <video class="deferred-video" muted loop playsinline preload="none" poster="assets/material-flakes.jpg" width="1280" height="720" aria-label="Evaluation rollout of a robot policy scooping flakes">
-                <source data-src="assets/material-flakes.mp4" type="video/mp4">
-              </video>
-              <span class="chip small unseen">Unseen during training</span>
-            </div>
-            <figcaption><b>Flakes</b><span>Thin, irregular pieces overlap and shift under utensil motion.</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 05 RESULTS ================= -->
     <section id="results" class="section" aria-labelledby="results-title">
-      <div class="wrap">
-        <p class="eyebrow" data-reveal><span class="num">05</span>Results</p>
-        <h2 id="results-title" data-reveal="2">VR demonstrations produce stronger policies</h2>
-        <p class="lede" data-reveal="3">Policies learned from VR demonstrations consistently achieved higher success rates than policies trained from 3D space-mouse demonstrations. BCQ performed best overall and generalized most strongly to unseen foods.</p>
+      <h2 id="results-title">Results</h2>
+      <p class="section-intro">Policies learned from VR demonstrations consistently achieved higher success rates than policies trained from 3D space-mouse demonstrations. BCQ performed best overall and generalized most strongly to unseen foods.</p>
 
-        <div class="results-top">
-          <figure class="panel-card" data-reveal style="margin:0">
-            <div class="chart-head">
-              <p class="chart-title" id="chart-title">Task success rate (%), averaged over all foods</p>
-              <ul class="legend" aria-label="Legend">
-                <li><i class="sw-vr"></i>VR demonstrations</li>
-                <li><i class="sw-3dm"></i>3D space-mouse demonstrations</li>
-              </ul>
-            </div>
-            <div class="chart" role="group" aria-labelledby="chart-title">
-              <div class="grid" aria-hidden="true">
-                <span style="bottom:0"><em>0</em></span><span style="bottom:25%"><em>25</em></span><span style="bottom:50%"><em>50</em></span><span style="bottom:75%"><em>75</em></span><span style="bottom:100%"><em>100</em></span>
-              </div>
-              <div class="groups">
-                <div class="group">
-                  <div class="bar vr" style="--v:64" role="img" aria-label="BC with VR demonstrations: 64 percent"><b>64</b></div>
-                  <div class="bar dm" style="--v:47; transition-delay:.1s" role="img" aria-label="BC with 3D space-mouse demonstrations: 47 percent"><b>47</b></div>
-                  <span class="group-label">BC</span>
-                </div>
-                <div class="group">
-                  <div class="bar vr" style="--v:73; transition-delay:.25s" role="img" aria-label="BC-RNN with VR demonstrations: 73 percent"><b>73</b></div>
-                  <div class="bar dm" style="--v:58; transition-delay:.35s" role="img" aria-label="BC-RNN with 3D space-mouse demonstrations: 58 percent"><b>58</b></div>
-                  <span class="group-label">BC-RNN</span>
-                </div>
-                <div class="group">
-                  <div class="bar vr best" style="--v:80; transition-delay:.5s" role="img" aria-label="BCQ with VR demonstrations: 80 percent, the best learned policy"><b>80</b></div>
-                  <div class="bar dm" style="--v:68; transition-delay:.6s" role="img" aria-label="BCQ with 3D space-mouse demonstrations: 68 percent"><b>68</b></div>
-                  <span class="group-label">BCQ</span>
-                </div>
-                <div class="group human">
-                  <div class="bar vr" style="--v:95; transition-delay:.75s" role="img" aria-label="Human expert with VR: 95 percent"><b>95</b></div>
-                  <div class="bar dm" style="--v:89; transition-delay:.85s" role="img" aria-label="Human expert with 3D space mouse: 89 percent"><b>89</b></div>
-                  <span class="group-label">Human expert<small>via each interface</small></span>
-                </div>
-              </div>
-            </div>
-            <figcaption class="chart-foot">Source: Table II, Ergogo, Dall&rsquo;Alba &amp; Korzeniowski, IROS 2025.</figcaption>
-          </figure>
-
-          <div class="panel-card hero-stat" data-reveal="2">
-            <p class="label">Best learned policy</p>
-            <p class="big">80<small>%</small></p>
-            <p>BCQ trained on VR demonstrations, vs. <b>68%</b> with 3D space-mouse demonstrations.</p>
-          </div>
-        </div>
-
-        <div class="results-bottom">
-          <div class="panel-card spill" data-reveal>
-            <p class="label" style="margin:0;color:var(--muted);font:600 13px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase">Spillage with BCQ</p>
-            <p style="margin:10px 0 0;color:var(--muted)">Average pieces spilled per trial (Table III)</p>
-            <div class="rows">
-              <div class="row"><span>VR demonstrations</span><div class="track"><div class="fill" style="--v:8;background:var(--amber)"></div><b>8</b></div></div>
-              <div class="row"><span>3D space-mouse demonstrations</span><div class="track"><div class="fill" style="--v:15;background:var(--blue);transition-delay:.2s"></div><b>15</b></div></div>
-            </div>
-          </div>
-          <div class="panel-card" data-reveal="2" style="display:grid">
-            <ul class="takeaways">
-              <li><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="#E3A250" stroke-width="2"/><path d="M15 24.5l6 5.5 12-13" stroke="#E3A250" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Policies trained on VR demonstrations consistently outperformed those trained on 3D space-mouse demonstrations.</li>
-              <li><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="#E3A250" stroke-width="2"/><path d="M15 24.5l6 5.5 12-13" stroke="#E3A250" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>BCQ performed best overall and generalized most strongly to foods unseen in training.</li>
-            </ul>
-          </div>
-        </div>
-
-        <details class="table-block" data-reveal>
-          <summary>Per-food success rates (Table II)</summary>
-          <div class="table-scroll" tabindex="0" aria-label="Success-rate results; scroll horizontally on small screens">
-            <table class="results-table">
-              <caption><a href="https://arxiv.org/pdf/2608.18258">Table II from the paper</a>. Task success rate (%); VRI denotes virtual reality interface demonstrations and 3DM denotes 3D space-mouse demonstrations.</caption>
-              <thead>
-                <tr>
-                  <th scope="col" rowspan="2" style="text-align:left">Material</th>
-                  <th scope="colgroup" colspan="2">BC</th>
-                  <th scope="colgroup" colspan="2">BC-RNN</th>
-                  <th scope="colgroup" colspan="2">BCQ</th>
-                  <th scope="colgroup" colspan="2">Human</th>
-                </tr>
-                <tr>
-                  <th scope="col"><abbr title="Virtual reality interface">VRI</abbr></th>
-                  <th scope="col"><abbr title="3D space mouse">3DM</abbr></th>
-                  <th scope="col"><abbr title="Virtual reality interface">VRI</abbr></th>
-                  <th scope="col"><abbr title="3D space mouse">3DM</abbr></th>
-                  <th scope="col"><abbr title="Virtual reality interface">VRI</abbr></th>
-                  <th scope="col"><abbr title="3D space mouse">3DM</abbr></th>
-                  <th scope="col"><abbr title="Virtual reality interface">VRI</abbr></th>
-                  <th scope="col"><abbr title="3D space mouse">3DM</abbr></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="group-row"><th colspan="9">Training materials</th></tr>
-                <tr><th scope="row">Rice</th><td>82</td><td>65</td><td>90</td><td>75</td><td>93</td><td>85</td><td>97</td><td>91</td></tr>
-                <tr><th scope="row">Buckwheat</th><td>80</td><td>60</td><td>88</td><td>72</td><td>91</td><td>80</td><td>95</td><td>88</td></tr>
-                <tr><th scope="row">Barley</th><td>78</td><td>58</td><td>85</td><td>70</td><td>89</td><td>78</td><td>96</td><td>90</td></tr>
-                <tr><th scope="row">Pasta</th><td>65</td><td>45</td><td>75</td><td>60</td><td>80</td><td>70</td><td>90</td><td>85</td></tr>
-                <tr class="group-row"><th colspan="9">Unseen materials</th></tr>
-                <tr><th scope="row">Peas</th><td>55</td><td>40</td><td>65</td><td>50</td><td>75</td><td>65</td><td>&mdash;</td><td>&mdash;</td></tr>
-                <tr><th scope="row">Beans</th><td>50</td><td>38</td><td>60</td><td>48</td><td>70</td><td>60</td><td>&mdash;</td><td>&mdash;</td></tr>
-                <tr><th scope="row">Flakes</th><td>35</td><td>20</td><td>50</td><td>30</td><td>60</td><td>40</td><td>&mdash;</td><td>&mdash;</td></tr>
-              </tbody>
-              <tfoot>
-                <tr><th scope="row">All materials (avg.)</th><td>64</td><td>47</td><td>73</td><td>58</td><td class="best-model">80</td><td>68</td><td>95</td><td>89</td></tr>
-              </tfoot>
-            </table>
-          </div>
-        </details>
+      <div class="table-scroll" tabindex="0" aria-label="Success-rate results; scroll horizontally on small screens">
+        <table class="results-table">
+          <caption><a href="https://arxiv.org/pdf/2608.18258">Table II from the paper</a>. Task success rate (%); VRI denotes virtual reality interface demonstrations and 3DM denotes 3D space-mouse demonstrations.</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">Material</th>
+              <th scope="colgroup" colspan="2">BC</th>
+              <th scope="colgroup" colspan="2">BC-RNN</th>
+              <th scope="colgroup" colspan="2">BCQ</th>
+              <th scope="colgroup" colspan="2">Human</th>
+            </tr>
+            <tr>
+              <th scope="col"><abbr title="Virtual reality interface">VRI</abbr></th>
+              <th scope="col"><abbr title="3D space mouse">3DM</abbr></th>
+              <th scope="col"><abbr title="Virtual reality interface">VRI</abbr></th>
+              <th scope="col"><abbr title="3D space mouse">3DM</abbr></th>
+              <th scope="col"><abbr title="Virtual reality interface">VRI</abbr></th>
+              <th scope="col"><abbr title="3D space mouse">3DM</abbr></th>
+              <th scope="col"><abbr title="Virtual reality interface">VRI</abbr></th>
+              <th scope="col"><abbr title="3D space mouse">3DM</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="group-row"><th colspan="9">Training materials</th></tr>
+            <tr><th scope="row">Rice</th><td>82</td><td>65</td><td>90</td><td>75</td><td>93</td><td>85</td><td>97</td><td>91</td></tr>
+            <tr><th scope="row">Buckwheat</th><td>80</td><td>60</td><td>88</td><td>72</td><td>91</td><td>80</td><td>95</td><td>88</td></tr>
+            <tr><th scope="row">Barley</th><td>78</td><td>58</td><td>85</td><td>70</td><td>89</td><td>78</td><td>96</td><td>90</td></tr>
+            <tr><th scope="row">Pasta</th><td>65</td><td>45</td><td>75</td><td>60</td><td>80</td><td>70</td><td>90</td><td>85</td></tr>
+            <tr class="group-row"><th colspan="9">Unseen materials</th></tr>
+            <tr><th scope="row">Peas</th><td>55</td><td>40</td><td>65</td><td>50</td><td>75</td><td>65</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><th scope="row">Beans</th><td>50</td><td>38</td><td>60</td><td>48</td><td>70</td><td>60</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><th scope="row">Flakes</th><td>35</td><td>20</td><td>50</td><td>30</td><td>60</td><td>40</td><td>&mdash;</td><td>&mdash;</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><th scope="row">All materials (avg.)</th><td>64</td><td>47</td><td>73</td><td>58</td><td class="best-model">80</td><td>68</td><td>95</td><td>89</td></tr>
+          </tfoot>
+        </table>
       </div>
+      <p class="result-note"><strong>Across all materials, BCQ reached 80% success with VR demonstrations versus 68% with 3D space-mouse demonstrations.</strong> Table III also reports lower BCQ spillage with VR data: 8 pieces on average compared with 15 for 3D space-mouse data.</p>
     </section>
 
-    <!-- ================= SCALE ================= -->
-    <section class="section" aria-labelledby="scale-title">
-      <div class="wrap">
-        <div class="scale-panel" data-reveal>
-          <video class="deferred-video" muted loop playsinline preload="none" poster="assets/vectorized-environments-clean.jpg" width="1280" height="720" aria-label="Multiple xArm7 robots running concurrently in vectorized VERAGMIL simulation environments">
-            <source data-src="assets/vectorized-environments-clean.mp4" type="video/mp4">
-          </video>
-          <div class="scale-copy">
-            <p class="eyebrow">Built to scale</p>
-            <h2 id="scale-title">Vectorized environments</h2>
-            <p>Multiple simulated robots run concurrently for parallel policy training and evaluation.</p>
-          </div>
-        </div>
-      </div>
+    <section class="section" aria-labelledby="parallel-title">
+      <h2 id="parallel-title">Vectorized environments</h2>
+      <p class="section-intro">VERAGMIL supports multiple simulated robot instances running concurrently, enabling vectorized environments for parallel policy training and evaluation.</p>
+      <figure class="vectorized-figure">
+        <video class="media-video deferred-video" muted loop playsinline preload="none" poster="assets/vectorized-environments.jpg" width="1280" height="720" aria-label="Multiple xArm7 robots running concurrently in vectorized VERAGMIL simulation environments">
+          <source data-src="assets/vectorized-environments.mp4" type="video/mp4">
+          <a href="assets/vectorized-environments.mp4">View the vectorized-environment clip.</a>
+        </video>
+        <figcaption>Parallel simulation instances can collect experience and evaluate policies concurrently.</figcaption>
+      </figure>
     </section>
 
-    <!-- ================= PAPER ================= -->
-    <section id="paper" class="section" aria-labelledby="paper-title">
-      <div class="wrap">
-        <p class="eyebrow" data-reveal>Paper</p>
-        <h2 id="paper-title" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Paper</h2>
-        <div class="paper-grid">
-          <div data-reveal>
-            <p class="official-title">VERAGMIL: Virtual Environment for Scooping Granular Foods with Imitation Learning Models</p>
-            <p class="paper-meta">Amanuel Ergogo, Diego Dall'Alba, and Przemyslaw Korzeniowski. 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pages 13075&ndash;13082.</p>
-            <div class="paper-links">
-              <a class="btn btn-primary" href="https://arxiv.org/pdf/2608.18258">Read the paper</a>
-              <a class="btn" href="https://doi.org/10.1109/IROS60139.2025.11247362">IEEE Xplore</a>
-              <a class="btn" href="https://arxiv.org/abs/2608.18258">arXiv</a>
-            </div>
-          </div>
-          <div class="abstract" data-reveal="2">
-            <h3>Abstract</h3>
-            <p>Robot-Assisted Feeding (RAF) systems are essential for assisting individuals with disabilities or motor impairments in eating tasks. Manipulating granular food items, such as rice and beans, poses significant challenges due to their dynamic physical properties. Learning from human demonstrations offers a promising solution, but acquiring high-quality demonstrations is complex. VERAGMIL combines a high-fidelity simulator with an intuitive VR interface for recording demonstrations and supporting different imitation learning methods. Experiments compare BC, BC-RNN, and BCQ on scooping and transport tasks using VR and 3D space-mouse demonstrations. Results show that VR-based demonstrations lead to stronger policies, with BCQ performing best overall, especially in reducing spillage and approaching human performance.</p>
-          </div>
-        </div>
-      </div>
+    <section id="paper" class="section prose">
+      <h2>Paper</h2>
+      <p class="official-title"><strong>VERAGMIL: Virtual Environment for Scooping Granular Foods with Imitation Learning Models</strong></p>
+      <p>Amanuel Ergogo, Diego Dall'Alba, and Przemyslaw Korzeniowski. IROS 2025, pages 13075–13082.</p>
+
+      <h3>Abstract</h3>
+      <p>Robot-Assisted Feeding (RAF) systems are essential for assisting individuals with disabilities or motor impairments in eating tasks. Manipulating granular food items, such as rice and beans, poses significant challenges due to their dynamic physical properties. Learning from human demonstrations offers a promising solution, but acquiring high-quality demonstrations is complex. VERAGMIL combines a high-fidelity simulator with an intuitive VR interface for recording demonstrations and supporting different imitation learning methods. Experiments compare BC, BC-RNN, and BCQ on scooping and transport tasks using VR and 3D space-mouse demonstrations. Results show that VR-based demonstrations lead to stronger policies, with BCQ performing best overall, especially in reducing spillage and approaching human performance.</p>
     </section>
 
-    <!-- ================= CITATION ================= -->
-    <section id="citation" class="section" aria-labelledby="citation-title">
-      <div class="wrap">
-        <p class="eyebrow" data-reveal>Cite</p>
-        <h2 id="citation-title" data-reveal="2">Citation</h2>
-        <div class="citation" data-reveal="3">
-          <button class="copy-btn" type="button" data-copy="#bibtex" hidden>Copy BibTeX</button>
-          <pre><code id="bibtex">@inproceedings{ergogo2025veragmil,
+    <section id="citation" class="section citation-section">
+      <h2>Citation</h2>
+      <pre><code>@inproceedings{ergogo2025veragmil,
   author    = {Ergogo, Amanuel and Dall'Alba, Diego and Korzeniowski, Przemyslaw},
   title     = {VERAGMIL: Virtual Environment for Scooping Granular Foods with Imitation Learning Models},
   booktitle = {2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
@@ -529,33 +283,19 @@
   pages     = {13075--13082},
   doi       = {10.1109/IROS60139.2025.11247362}
 }</code></pre>
-        </div>
-      </div>
     </section>
   </main>
 
-  <!-- ================= END CARD ================= -->
-  <footer class="endcard">
-    <div class="wrap">
-      <p class="mark">VERAGMIL</p>
-      <span class="rule" aria-hidden="true"></span>
-      <p class="title">Virtual Environment for Scooping Granular Foods<br> with Imitation Learning Models</p>
-      <p class="who">Amanuel Ergogo · Diego Dall'Alba · Przemyslaw Korzeniowski</p>
-      <p class="venue">2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</p>
-      <nav class="link-cards" aria-label="Project resources">
-        <a class="link-card" href="#film"><small>Film</small><span>Watch the project film</span></a>
-        <a class="link-card" href="https://arxiv.org/abs/2608.18258"><small>Paper</small><span>arxiv.org/abs/2608.18258</span></a>
-        <a class="link-card" href="https://github.com/AmanuelErgogo/VERAGMIL"><small>Code</small><span>github.com/AmanuelErgogo/VERAGMIL</span></a>
-      </nav>
-      <p class="site-foot">Project page for VERAGMIL · IROS 2025 · <a href="https://github.com/AmanuelErgogo/VERAGMIL">Website source</a></p>
-    </div>
+  <footer>
+    <p>Project page for VERAGMIL · IROS 2025</p>
+    <p><a href="https://github.com/AmanuelErgogo/VERAGMIL">Code and website source</a></p>
   </footer>
 
   <script>
     (() => {
+      const videos = document.querySelectorAll(".deferred-video");
+      const autoplayVideos = document.querySelectorAll("video[autoplay]");
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const deferred = document.querySelectorAll(".deferred-video");
-      const hero = document.querySelector(".hero-bg");
 
       const loadVideo = (video) => {
         const source = video.querySelector("source[data-src]");
@@ -564,54 +304,38 @@
         video.load();
       };
 
-      // Reveal-on-scroll and chart animation.
-      const revealables = document.querySelectorAll("[data-reveal], .chart, .spill");
-      if (reducedMotion || !("IntersectionObserver" in window)) {
-        revealables.forEach((el) => el.classList.add("in"));
-      } else {
-        const ro = new IntersectionObserver((entries) => {
-          entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); ro.unobserve(e.target); } });
-        }, { rootMargin: "0px 0px -10% 0px", threshold: 0.15 });
-        revealables.forEach((el) => ro.observe(el));
-      }
-
-      // Looping clips play only while visible.
       if (reducedMotion) {
-        if (hero) { hero.removeAttribute("autoplay"); hero.pause(); }
-        deferred.forEach((video) => { loadVideo(video); video.controls = true; });
-      } else if (!("IntersectionObserver" in window)) {
-        deferred.forEach((video) => { loadVideo(video); video.play().catch(() => {}); });
-      } else {
-        const vo = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) { loadVideo(entry.target); entry.target.play().catch(() => {}); }
-            else { entry.target.pause(); }
-          });
-        }, { rootMargin: "80px 0px", threshold: 0.35 });
-        deferred.forEach((video) => vo.observe(video));
-      }
-
-      // Film: big play button, hidden once playback starts.
-      const film = document.querySelector("#film video");
-      const playBtn = document.querySelector(".film-play");
-      if (film && playBtn) {
-        playBtn.hidden = false;
-        playBtn.addEventListener("click", () => { film.play().catch(() => {}); film.focus(); });
-        film.addEventListener("play", () => playBtn.closest(".film-frame").classList.add("playing"));
-      }
-
-      // Copy BibTeX.
-      document.querySelectorAll("[data-copy]").forEach((btn) => {
-        if (!navigator.clipboard) return;
-        btn.hidden = false;
-        btn.addEventListener("click", () => {
-          const text = document.querySelector(btn.dataset.copy).textContent;
-          navigator.clipboard.writeText(text).then(() => {
-            btn.textContent = "Copied";
-            setTimeout(() => { btn.textContent = "Copy BibTeX"; }, 1800);
-          });
+        videos.forEach((video) => {
+          loadVideo(video);
+          video.controls = true;
         });
-      });
+        autoplayVideos.forEach((video) => {
+          video.pause();
+          video.controls = true;
+        });
+        return;
+      }
+
+      if (!("IntersectionObserver" in window)) {
+        videos.forEach((video) => {
+          loadVideo(video);
+          video.play().catch(() => {});
+        });
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            loadVideo(entry.target);
+            entry.target.play().catch(() => {});
+          } else {
+            entry.target.pause();
+          }
+        });
+      }, { rootMargin: "80px 0px", threshold: 0.35 });
+
+      videos.forEach((video) => observer.observe(video));
     })();
   </script>
 </body>
